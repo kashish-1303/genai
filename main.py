@@ -8,7 +8,7 @@ import re
 st.set_page_config(page_title="Chatbot with Image Generation")
 
 # Initialize OpenAI client
-client = OpenAI(api_key="sk-proj-elcxIFzuutp7nFKjtzhvT3BlbkFJARwOefUtjKLsS8fgkHzJ")
+client = st.secrets["OPENAI_API_KEY"]
 
 def chat_with(prompt):
     response = client.chat.completions.create(
